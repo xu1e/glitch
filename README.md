@@ -8,10 +8,9 @@ A beautiful Neovim dashboard plugin with animated logos, multiple themes, and ea
 
 ### 🎬 Demo Video
 
-<video width="800" controls>
-  <source src="Screen Recording 2025-11-01 at 17.58.02.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+[📹 Watch the demo video](./Screen%20Recording%202025-11-01%20at%2017.58.02.mov)
+
+> Click the link above to see the Glitch Dashboard plugin in action with animations and theme switching!
 
 ## ✨ Features
 
