@@ -10,10 +10,6 @@ A beautiful Neovim dashboard plugin with animated logos, multiple themes, and ea
 
 ![Glitch Dashboard Demo](glitch-demo.gif)
 
-**Alternative formats:**
-
-- [📹 MP4 Video](./glitch-demo.mp4) (971KB)
-- [📹 Original MOV](./Screen%20Recording%202025-11-01%20at%2017.58.02.mov) (2.2MB)
 
 ## ✨ Features
 
