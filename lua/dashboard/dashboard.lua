@@ -28,7 +28,6 @@ local function setup_dashboard()
       { key = "r", icon = "󰋚", desc = "Recent Files", cmd = "Telescope oldfiles" },
       { key = "t", icon = "󰺮", desc = "Find Text", cmd = "Telescope live_grep" },
       { key = "l", icon = "󰒲", desc = "Lazy", cmd = "Lazy" },
-      { key = "a", icon = "🎭", desc = "Toggle Animation", cmd = "GlitchToggleAnimation" },
       { key = "q", icon = "󰩈", desc = "Quit", cmd = "qa" },
     },
   })
