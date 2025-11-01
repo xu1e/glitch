@@ -114,22 +114,32 @@ require("glitch").setup({
 
 ### Logo Only Mode
 
+Display just the logo without dashboard menus and footers:
+
 ```lua
 require("glitch").setup({
   plugin = {
     mode = "logo",
     logo = {
-      "▓██   ██▓ ▒█████   █    ██  ██▀███  ",
-      " ▒██  ██▒▒██▒  ██▒ ██  ▓██▒▓██ ▒ ██▒",
-      "  ▒██ ██░▒██░  ██▒▓██  ▒██░▓██ ░▄█ ▒",
-      "  ░ ▐██▓░▒██   ██░▓▓█  ░██░▒██▀▀█▄  ",
-      "  ░ ██▒▓░░ ████▓▒░▒▒█████▓ ░██▓ ▒██▒",
-      "   ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ░ ▒▓ ░▒▓░",
+      "   ██████╗ ██╗     ██╗████████╗ ██████╗██╗  ██╗",
+      "  ██╔════╝ ██║     ██║╚══██╔══╝██╔════╝██║  ██║",
+      "  ██║  ███╗██║     ██║   ██║   ██║     ███████║",
+      "  ██║   ██║██║     ██║   ██║   ██║     ██╔══██║",
+      "  ╚██████╔╝███████╗██║   ██║   ╚██████╗██║  ██║",
+      "   ╚═════╝ ╚══════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝",
     }
   },
-  animation = { enabled = false }
+  colors = {
+    scheme = "neon_glitch"
+  },
+  animation = {
+    type = "rgb",
+    wave_delay = 150
+  }
 })
 ```
+
+Perfect for startup screens or when you want a clean, distraction-free logo display.
 
 ### Custom Menu
 
@@ -167,25 +177,6 @@ require("glitch").setup({
     scheme = "neon_glitch"
   }
 })
-```
-
-## 📁 File Structure
-
-```
-your-plugin/
-├── lazy-config.lua        # Example lazy.nvim configuration
-├── init.lua               # Main plugin entry point
-└── lua/
-    ├── config/
-    │   └── config.lua     # Configuration system
-    ├── themes/
-    │   └── themes.lua     # Theme definitions
-    ├── dashboard/
-    │   └── dashboard.lua  # Alpha.nvim compatibility
-    └── glitch/
-        ├── init.lua       # Core plugin logic
-        ├── dashboard.lua  # Dashboard implementation
-        └── loader.lua     # Dynamic module loader
 ```
 
 That's it! 🎉 The plugin is designed to be simple to use while providing powerful customization options when needed.
