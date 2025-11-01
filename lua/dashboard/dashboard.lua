@@ -18,18 +18,9 @@ local function setup_dashboard()
       enabled = true,
       type = "rgb", -- Start with RGB animation
       glitch_intensity = 0.005,
-      wave_delay = 80,
+      wave_delay = 800, -- Reduced speed by 90%
       rgb_cycle_speed = 8,
     },
-    -- Customize menu items (will use config defaults if not specified)
-    -- menu = {
-    --   { key = "f", icon = "󰈞", desc = "Find Files", cmd = "Telescope find_files" },
-    --   { key = "e", icon = "󰈔", desc = "New File", cmd = "ene | startinsert" },
-    --   { key = "r", icon = "󰋚", desc = "Recent Files", cmd = "Telescope oldfiles" },
-    --   { key = "t", icon = "󰺮", desc = "Find Text", cmd = "Telescope live_grep" },
-    --   { key = "l", icon = "󰒲", desc = "Lazy", cmd = "Lazy" },
-    --   { key = "q", icon = "󰩈", desc = "Quit", cmd = "qa" },
-    -- },
   })
   
   -- Auto-show dashboard on VimEnter if no files are opened

@@ -30,7 +30,7 @@ M.defaults = {
   animation = {
     enabled = true,
     type = "rgb", -- "glitch", "rgb", "wave", or "none"
-    wave_delay = 80, -- milliseconds between animation updates
+    wave_delay = 800, -- milliseconds between animation updates (reduced speed by 90%)
     glitch_intensity = 0.003, -- probability of line glitch per frame
     glitch_line_corruption = true, -- enable full line corruption patterns
     glitch_chars = true, -- enable character corruption
@@ -198,7 +198,7 @@ M.presets = {
     animation = {
       type = "glitch",
       glitch_intensity = 0.01,
-      wave_delay = 50
+      wave_delay = 500 -- Reduced speed by 90%
     }
   },
   
@@ -206,7 +206,7 @@ M.presets = {
     animation = {
       type = "rgb",
       rgb_cycle_speed = 12,
-      wave_delay = 100
+      wave_delay = 1000 -- Reduced speed by 90%
     }
   }
 }
