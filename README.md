@@ -8,15 +8,12 @@ A beautiful Neovim dashboard plugin with animated logos, multiple themes, and ea
 
 ### 🎬 Demo Video
 
-**To embed the video properly on GitHub:**
+![Glitch Dashboard Demo](glitch-demo.gif)
 
-1. Go to [your repository page](https://github.com/xu1e/glitch)
-2. Click "Edit" on this README.md file (pencil icon)
-3. Drag and drop your video file directly into the editor
-4. GitHub will generate a proper video embed URL
-5. Replace this section with the generated code
+**Alternative formats:**
 
-**Current download link:** [📹 Demo Video](./Screen%20Recording%202025-11-01%20at%2017.58.02.mov)
+- [📹 MP4 Video](./glitch-demo.mp4) (971KB)
+- [📹 Original MOV](./Screen%20Recording%202025-11-01%20at%2017.58.02.mov) (2.2MB)
 
 ## ✨ Features
 
