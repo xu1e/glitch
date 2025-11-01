@@ -524,7 +524,7 @@ function M.setup(opts)
     -- Dashboard mode - auto-show on startup and create commands
     vim.api.nvim_create_autocmd("VimEnter", {
       callback = function()
-        if vim.fn.argc() == 0 then
+        if vim.fn.argc() == 0 and vim.fn.line2byte("$") == -1 then
           vim.schedule(function()
             local dashboard = loader.get_dashboard()
             if dashboard then
@@ -551,7 +551,7 @@ function M.setup(opts)
     -- Standalone logo mode
     vim.api.nvim_create_autocmd("VimEnter", {
       callback = function()
-        if vim.fn.argc() == 0 then
+        if vim.fn.argc() == 0 and vim.fn.line2byte("$") == -1 then
           vim.schedule(M.show)
         end
       end,

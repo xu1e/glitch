@@ -1,0 +1,62 @@
+# Neovim/Lua plugin .gitignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Vim/Neovim temporary files
+*.swp
+*.swo
+*~
+.netrwhist
+Session.vim
+.viminfo
+
+# Lua compiled files
+luac.out
+
+# Test files
+test_*.lua
+*_test.lua
+tests/tmp/
+spec/fixtures/
+
+# Development/debugging files
+debug.log
+*.log
+.debug/
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Documentation build files
+doc/tags
+doc/*.txt~
+
+# Local configuration
+local.lua
+local_config.lua
+.local/
+
+# Node.js (if using for any tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary directories
+tmp/
+temp/
+.tmp/

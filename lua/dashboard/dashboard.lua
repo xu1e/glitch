@@ -85,10 +85,10 @@ M.close = function() glitch_dashboard.close_dashboard() end
 M.toggle_animation = function() glitch_dashboard.toggle_animation() end
 M.is_active = function() return glitch_dashboard.is_active() end
 
--- Initialize if called directly
-if not M._initialized then
-  M._initialized = true
-  setup_dashboard()
-end
+-- Initialize if called directly (comment out auto-init to prevent conflicts)
+-- if not M._initialized then
+--   M._initialized = true
+--   setup_dashboard()
+-- end
 
 return M
