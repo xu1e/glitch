@@ -30,7 +30,8 @@ M.defaults = {
   animation = {
     enabled = true,
     type = "rgb", -- "glitch", "rgb", "wave", or "none"
-    wave_delay = 400, -- milliseconds between animation updates (reduced speed by 90%)
+    wave_delay = 1000, -- milliseconds between logo animation updates (restored to balanced speed)
+    footer_delay = 400, -- milliseconds between footer quotes updates (70% slower than logo)
     glitch_intensity = 0.003, -- probability of line glitch per frame
     glitch_line_corruption = true, -- enable full line corruption patterns
     glitch_chars = true, -- enable character corruption
@@ -198,7 +199,8 @@ M.presets = {
     animation = {
       type = "glitch",
       glitch_intensity = 0.01,
-      wave_delay = 500 -- Reduced speed by 90%
+      wave_delay = 200, -- Fast logo animation
+      footer_delay = 700 -- Footer quotes 70% slower
     }
   },
   
@@ -206,7 +208,8 @@ M.presets = {
     animation = {
       type = "rgb",
       rgb_cycle_speed = 12,
-      wave_delay = 1000 -- Reduced speed by 90%
+      wave_delay = 600, -- Slower logo animation
+      footer_delay = 2100 -- Footer quotes 70% slower
     }
   }
 }

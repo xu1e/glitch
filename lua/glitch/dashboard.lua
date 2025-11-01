@@ -13,6 +13,8 @@ local dashboard_state = {
   active = false,
   timer = nil,
   animation_frame = 0,
+  footer_animation_counter = 0,
+  current_footer_quote_index = 1,
   is_animating = false,
   glitch_state = {},
   stats = {},
@@ -63,7 +65,8 @@ local function get_dashboard_config()
         enabled = true,
         type = "rgb",
         glitch_intensity = 0.003,
-        wave_delay = 800,
+        wave_delay = 400,
+        footer_delay = 1400,
         rgb_cycle_speed = 8,
       },
       header = header,
@@ -94,7 +97,8 @@ local function get_dashboard_config()
         enabled = true,
         type = "rgb",
         glitch_intensity = 0.003,
-        wave_delay = 800,
+        wave_delay = 400,
+        footer_delay = 400,
         rgb_cycle_speed = 8,
       },
       header = {
@@ -206,7 +210,7 @@ local function generate_dashboard_content()
   
   -- Menu items
   for _, item in ipairs(config.menu) do
-    local menu_line = string.format("%-1s  %-27s  [%s]", item.icon, item.desc, item.key)
+    local menu_line = string.format("%s  %-27s  [%s]", item.icon, item.desc, item.key)
     table.insert(content, center_text(menu_line, width))
   end
   
@@ -232,8 +236,8 @@ local function generate_dashboard_content()
     table.insert(content, "")
   end
   
-  -- Random quote
-  local quote = config.footer_quotes[math.random(#config.footer_quotes)]
+  -- Footer quote (cycling through quotes at different speed)
+  local quote = config.footer_quotes[dashboard_state.current_footer_quote_index]
   table.insert(content, center_text(quote, width))
   
   return content
@@ -325,6 +329,14 @@ local function start_dashboard_animation()
     end
     
     dashboard_state.animation_frame = dashboard_state.animation_frame + 1
+    dashboard_state.footer_animation_counter = dashboard_state.footer_animation_counter + config.animation.wave_delay
+    
+    -- Check if it's time to change footer quote (based on footer_delay)
+    local footer_delay = config.animation.footer_delay or (config.animation.wave_delay * 3.5) -- Default 70% slower
+    if dashboard_state.footer_animation_counter >= footer_delay then
+      dashboard_state.footer_animation_counter = 0
+      dashboard_state.current_footer_quote_index = (dashboard_state.current_footer_quote_index % #config.footer_quotes) + 1
+    end
     
     -- Generate new content
     local content = generate_dashboard_content()
