@@ -55,7 +55,7 @@ M.defaults = {
       { key = "t", icon = "󰺮", desc = "Find Text", cmd = "Telescope live_grep" },
       { key = "b", icon = "󰙅", desc = "File Browser", cmd = "Telescope file_browser" },
       { key = "l", icon = "󰒲", desc = "Lazy", cmd = "Lazy" },
-      { key = "c", icon = "󰒓", desc = "Config", cmd = "e $MYVIMRC" },{ key = "s", icon = "󰔡", desc = "Sessions", cmd = "Telescope sessions" },{ key = "a", icon = "🎭", desc = "Toggle Animation", cmd = "GlitchToggleAnimation" },
+      { key = "c", icon = "󰒓", desc = "Config", cmd = "e $MYVIMRC" },
       { key = "q", icon = "󰩈", desc = "Quit", cmd = "qa" },
     },
     footer_quotes = {
