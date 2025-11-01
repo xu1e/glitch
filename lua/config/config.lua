@@ -30,7 +30,7 @@ M.defaults = {
   animation = {
     enabled = true,
     type = "rgb", -- "glitch", "rgb", "wave", or "none"
-    wave_delay = 100, -- milliseconds between logo animation updates (doubled speed again)
+    wave_delay = 77, -- milliseconds between logo animation updates (fine-tuned speed)
     footer_delay = 2800, -- milliseconds between footer quotes updates (50% slower than before)
     glitch_intensity = 0.003, -- probability of line glitch per frame
     glitch_line_corruption = true, -- enable full line corruption patterns
@@ -199,7 +199,7 @@ M.presets = {
     animation = {
       type = "glitch",
       glitch_intensity = 0.01,
-      wave_delay = 50, -- Ultra-fast logo animation (doubled again)
+      wave_delay = 40, -- Ultra-fast logo animation (proportional to 77ms)
       footer_delay = 1400 -- Footer quotes 50% slower than before
     }
   },
@@ -208,7 +208,7 @@ M.presets = {
     animation = {
       type = "rgb",
       rgb_cycle_speed = 12,
-      wave_delay = 150, -- Very fast logo animation (doubled again)
+      wave_delay = 120, -- Smooth logo animation (proportional to 77ms)
       footer_delay = 4200 -- Footer quotes 50% slower than before
     }
   }
