@@ -2,6 +2,17 @@
 
 A beautiful Neovim dashboard plugin with animated logos, multiple themes, and easy customization.
 
+## 📸 Preview
+
+![Glitch Dashboard](glitch.png)
+
+### 🎬 Demo Video
+
+<video width="800" controls>
+  <source src="Screen Recording 2025-11-01 at 17.58.02.mov" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
+
 ## ✨ Features
 
 - 🎨 **5 Built-in Themes** - Neon Glitch, Cyberpunk RGB, Matrix Flow, Retro Wave, Minimal Clean
