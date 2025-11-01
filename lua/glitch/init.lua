@@ -521,7 +521,23 @@ function M.setup(opts)
   local dashboard_available = loader.is_available("glitch.dashboard")
   
   if dashboard_enabled and dashboard_available then
-    -- Dashboard mode - let dashboard handle VimEnter
+    -- Dashboard mode - auto-show on startup and create commands
+    vim.api.nvim_create_autocmd("VimEnter", {
+      callback = function()
+        if vim.fn.argc() == 0 then
+          vim.schedule(function()
+            local dashboard = loader.get_dashboard()
+            if dashboard then
+              dashboard.show_dashboard()
+            else
+              -- Fallback to logo if dashboard not available
+              M.show()
+            end
+          end)
+        end
+      end,
+    })
+    
     vim.api.nvim_create_user_command("GlitchLogo", M.show, { desc = "Show Glitch Logo" })
     vim.api.nvim_create_user_command("GlitchDashboard", function()
       local dashboard = loader.get_dashboard()
