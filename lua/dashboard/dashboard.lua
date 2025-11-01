@@ -18,8 +18,8 @@ local function setup_dashboard()
       enabled = true,
       type = "rgb", -- Start with RGB animation
       glitch_intensity = 0.005,
-      wave_delay = 1000, -- Logo animation speed (restored to balanced)
-      footer_delay = 400, -- Footer quotes 70% slower than logo
+      wave_delay = 200, -- Logo animation speed (100% faster/doubled)
+      footer_delay = 2800, -- Footer quotes 50% slower than before
       rgb_cycle_speed = 8,
     },
   })
