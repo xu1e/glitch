@@ -206,7 +206,7 @@ local function generate_dashboard_content()
   
   -- Menu items
   for _, item in ipairs(config.menu) do
-    local menu_line = string.format("%-5s  %s  [%27s]", item.icon, item.desc, item.key)
+    local menu_line = string.format("%-1s  %-27s  [%s]", item.icon, item.desc, item.key)
     table.insert(content, center_text(menu_line, width))
   end
   
