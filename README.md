@@ -25,8 +25,11 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
 {
   "xu1e/glitch",
-  event = "VimEnter",
+  lazy = false,
   priority = 1000,
+  cond = function()
+    return vim.fn.argc(-1) == 0
+  end,
   config = function()
     require("glitch").setup({
       plugin = {
